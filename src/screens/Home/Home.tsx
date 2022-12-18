@@ -3,7 +3,7 @@ import './Home.css';
 
 function Home() {
     return (
-        <div class="title">Home page!</div>
+        <div className="title">Home page!</div>
     );
 }
 export default Home;
