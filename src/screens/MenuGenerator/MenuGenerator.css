@@ -1,0 +1,20 @@
+.container-weekly{
+    position: absolute;
+    right: 400px;
+    text-align: center;    
+    height: 100px;
+    width: 20%;
+    background-color: #F5B041;
+    margin: 0% auto;
+    margin-top: 300px;
+}
+.container-monthly{
+    position: absolute;
+    left: 400px;
+    text-align: center;    
+    height: 100px;
+    width: 20%;
+    background-color: #58D68D;
+    margin: 0% auto;
+    margin-top: 300px;
+}

@@ -19,18 +19,47 @@ export default function WeekView() {
     const [error, setError] = useState<Error>();
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState<Meal[]>([]);
-
-    if (items.length === 0) {
+if(items.length === 0)
+{
         return (
+
             <div>
-                <button onClick={onclick}>Generate Meals!</button>
+                <div className="container">
+                    <h1>Weekly Menu:</h1>
+                        <ul>
+                            <div className="input">
+                                <li><label>Monday: </label></li>
+                            </div>
+                            <div className="input">
+                                <li><label>Tuesday: </label></li>
+                            </div>
+                            <div className="input">
+                                <li><label>Wednesday: </label></li>
+                            </div>
+                            <div className="input">
+                                <li><label>Thursday: </label></li>
+                            </div>
+                            <div className="input">
+                                <li><label>Friday: </label></li>
+                            </div>
+                            <div className="input">
+                                <li><label>Saturday: </label></li>
+                            </div>
+                            <div className="input">
+                                <li><label>Sunday: </label></li>
+                            </div>
+                        </ul>
+                <div>
+                        <button className="generateButton" onClick={onclick}>Generate!</button>
+                    </div>
+                </div>
             </div>
         );
-    }
-    else {
-        return (
-
-            <div>
+        }
+        else
+        {
+            return(
+                <div>
                 <div className="container">
                     <h1>Weekly Menu:</h1>
                         <ul>
@@ -61,8 +90,8 @@ export default function WeekView() {
                     </div>
                 </div>
             </div>
-        );
-    }
+            );
+        }
 
     function onclick() {
         fetch('https://localhost:5001/api/v1/meals', {

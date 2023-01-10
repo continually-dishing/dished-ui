@@ -1,15 +1,10 @@
 import React from "react";
-import './WeeklyMenu.css';
-import MenuView from '../../components/WeekView/WeekView'
+import WeekView from "../../components/WeekView/WeekView";
 
-export default function WeeklyMenu() {
-    
-        return (
-            <div>
-            <MenuView/>
-    
-            </div>
-        );
-    
-
+export default function WeeklyMenu(){
+    return(
+        <>
+        <WeekView/>
+        </>
+    );
 }

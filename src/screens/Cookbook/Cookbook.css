@@ -1,18 +1,11 @@
-.list-container{
+.cookbook-form{
+    display: inline-block;
     background-color: #EFEFEF;
-    border: 5px solid;
-    text-align: center;
-
+    border: 2px solid;
     width: 20%;
 
 }
-ul{
-    display: inline-block;
-    text-align: left;  
-}
-li{
-    background-color: white;
-}
-.generate-button{
-    margin-bottom: 10px;
+body {
+    text-align: center;
+
 }
