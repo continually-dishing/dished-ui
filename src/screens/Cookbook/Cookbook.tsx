@@ -3,14 +3,27 @@ import './Cookbook.css';
 
 export default function Cookbook() {
 
-  
+
 interface Meal  { 
   name: string,
   difficulty: string,
   prepTime: number
   totalTime: number
   ingredients: string[] | null,
+  budgetFriendly: boolean,
+  vegan: boolean,
+  vegetarian: boolean,
+}
 
+function returnBool(value: string) {
+  switch(value)
+  {
+    case "yes": 
+    case "Yes":
+      return true;
+    default:
+      return false;
+  }
 }
 
 function parseIngredients (ingredients : string) {
@@ -34,7 +47,11 @@ async function onSubmit() {
     ingredients: parseIngredients(inputs[1].value),
     difficulty: selectInputs[0].value, 
     prepTime: +inputs[2].value, 
-    totalTime: +inputs[3].value  }
+    totalTime: +inputs[3].value,
+    budgetFriendly: returnBool(selectInputs[1].value),
+    vegan: returnBool(selectInputs[2].value),
+    vegetarian: returnBool(selectInputs[3].value)
+  }
 
   console.log(JSON.stringify(newMeal))
 
