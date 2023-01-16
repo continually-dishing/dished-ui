@@ -19,6 +19,7 @@ export default function WeekView() {
     const [error, setError] = useState<Error>();
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState<Meal[]>([]);
+    
 if(items.length === 0)
 {
         return (
