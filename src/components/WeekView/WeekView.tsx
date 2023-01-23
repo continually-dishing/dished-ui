@@ -19,7 +19,7 @@ export default function WeekView() {
     const [error, setError] = useState<Error>();
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState<Meal[]>([]);
-    
+
 if(items.length === 0)
 {
         return (
@@ -88,6 +88,7 @@ if(items.length === 0)
                         </ul>
                 <div>
                         <button className="generateButton" onClick={onclick}>Generate!</button>
+                        <button className="ingredientButton">Generate Ingredient List!</button>
                     </div>
                 </div>
             </div>

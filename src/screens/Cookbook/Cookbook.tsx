@@ -1,5 +1,6 @@
 import React from "react";
 import './Cookbook.css';
+import  IngredientList  from "../../components/IngredientList/IngredientList";
 
 export default function Cookbook() {
 
@@ -94,7 +95,7 @@ else{
           <option>Difficult</option>
         </select><br />
         <label>Ingredients:</label><br />
-        <input id='ingredients'></input><br />
+        <IngredientList/>
         <label>Prep time:</label><br />
         <input id='prepTime'></input><br />
         <label>Total time:</label><br />
