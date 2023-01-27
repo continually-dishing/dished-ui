@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import './IngredientList.css'
+
 
 export default function IngredientList(){
    
@@ -7,8 +9,11 @@ export default function IngredientList(){
    
     function AddIngredient(input: string) {
         
-        setList([...list, input])
-        setInput('');
+        if (input !== '') // make sure input isnt empty before adding it in
+        {
+            setList([...list, input])
+            setInput('');
+        }
 
     }
 
@@ -19,6 +24,8 @@ export default function IngredientList(){
 
     return(
         <>
+            <body>
+        <label>Ingredients:</label><br />
         <input id='ingredient-input' type="text" value={input} onChange={(e) => setInput(e.target.value)}></input>
         <button onClick={() => AddIngredient(input)}>Add!</button>
         <ul>
@@ -28,6 +35,7 @@ export default function IngredientList(){
         </li>;
             })}
         </ul>
+        </body>
         </>
     );
 }

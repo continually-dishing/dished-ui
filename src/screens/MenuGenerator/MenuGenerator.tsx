@@ -8,7 +8,7 @@ import Button  from '../../components/Button/Button'
 export default function MenuView() {
     
 function onWeekClick () {
-    location.href='weeklyMenu';
+    window.location.href='weeklyMenu';
 }
 
         return (

@@ -1,11 +1,18 @@
-.cookbook-form{
+.parent {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    padding: 2rem 2rem;
+
+  }
+  .child {
     display: inline-block;
-    background-color: #EFEFEF;
-    border: 2px solid;
-    width: 20%;
+    border: 1px solid gray;
+    background-color: #EEEE;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
 
-}
-body {
+  body{
     text-align: center;
-
-}
+  }

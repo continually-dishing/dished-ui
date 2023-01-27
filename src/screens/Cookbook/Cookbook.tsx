@@ -1,5 +1,6 @@
 import React from "react";
 import './Cookbook.css';
+import NewRecipe from "../../components/NewRecipe/NewRecipe";
 import  IngredientList  from "../../components/IngredientList/IngredientList";
 
 export default function Cookbook() {
@@ -42,6 +43,12 @@ async function onSubmit() {
 
  var inputs = document.getElementsByTagName('input');
  var selectInputs = document.getElementsByTagName('select');
+ var ingredientItems = document.getElementsByTagName('li');
+
+for(let i = 0; i < ingredientItems.length; i++)
+{
+  console.log(ingredientItems[i].value)
+}
 
   let newMeal : Meal = {
     name: inputs[0].value, 
@@ -82,45 +89,15 @@ else{
 
   return (
     <>
+    <body>
       <h3>Your Cookbook!</h3>
-      <body>
-      <div id='myCookBookForm' className="cookbook-form">
-        <label>Name of meal:</label><br />
-        <input id='name'></input><br />
-        <label>Difficulty:</label><br />
-        <select id="difficulty-level">
-        <option hidden selected label=" "></option>
-          <option> Easy</option>
-          <option> Intermediate</option>
-          <option>Difficult</option>
-        </select><br />
-        <label>Ingredients:</label><br />
-        <IngredientList/>
-        <label>Prep time:</label><br />
-        <input id='prepTime'></input><br />
-        <label>Total time:</label><br />
-        <input id='totalTime'></input><br />
-        <label>Budget Friendly:</label><br />
-        <select id="budget-friendly">
-        <option hidden selected label=" "></option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select><br />
-        <label>Vegan:</label><br />
-        <select id="vegan">
-        <option hidden selected label=" "></option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select><br />
-        <label>Vegetarian:</label><br />
-        <select id="vegetarian">
-        <option hidden selected label=" "></option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select><br />
-        <button type="button" onClick={onSubmit}>Submit!</button>
+      <div className="parent">
+      <div className="child"><NewRecipe/></div>
+      <div className="child" style={{marginLeft:'20px'}}><IngredientList/></div>
       </div>
+      <button className="submit-button" type="button" onClick={onSubmit}>Submit!</button>
       </body>
+
     </>
   );
 
