@@ -1,17 +1,21 @@
-import React from "react";
+import {v4 as uuidv4} from 'uuid';
+import React, { useState } from "react";
 import './Cookbook.css';
-import NewRecipe from "../../components/NewRecipe/NewRecipe";
-import  IngredientList  from "../../components/IngredientList/IngredientList";
+//import  IngredientList  from "../../components/IngredientList/IngredientList";
 
 export default function Cookbook() {
 
+  interface Ingredient {
+    ID: string,
+    Name: string,
+  }
 
 interface Meal  { 
   name: string,
   difficulty: string,
   prepTime: number
   totalTime: number
-  ingredients: string[] | null,
+  ingredients: Ingredient[] | null,
   budgetFriendly: boolean,
   vegan: boolean,
   vegetarian: boolean,
@@ -28,31 +32,44 @@ function returnBool(value: string) {
   }
 }
 
-function parseIngredients (ingredients : string) {
-  let array :string[]
+const [list, setList] = useState<string []>([]);
+const [input, setInput] = useState('')
 
-  if (ingredients !== null)
-  {
-     array = ingredients.split(', ')
-     return array
-  }
-  return null
+function AddIngredient(input: string) {
+    
+    if (input !== '') // make sure input isnt empty before adding it in
+    {
+        setList([...list, input])
+        setInput('');
+    }
+
+}
+
+function RemoveIngredient(item : string) {
+    const newList = list.filter((currentIngredient) => currentIngredient !== item )
+    setList(newList);
 }
 
 async function onSubmit() {
 
+  let arr = new Array<Ingredient>(list.length);
+
  var inputs = document.getElementsByTagName('input');
  var selectInputs = document.getElementsByTagName('select');
- var ingredientItems = document.getElementsByTagName('li');
 
-for(let i = 0; i < ingredientItems.length; i++)
+for (let i = 0; i < list.length; i++)
 {
-  console.log(ingredientItems[i].value)
+    let newIngredient : Ingredient = {
+      ID: uuidv4(),
+      Name: list[i],
+    }
+
+    arr[i] = newIngredient;
 }
 
   let newMeal : Meal = {
     name: inputs[0].value, 
-    ingredients: parseIngredients(inputs[1].value),
+    ingredients: arr,
     difficulty: selectInputs[0].value, 
     prepTime: +inputs[2].value, 
     totalTime: +inputs[3].value,
@@ -92,12 +109,55 @@ else{
     <body>
       <h3>Your Cookbook!</h3>
       <div className="parent">
-      <div className="child"><NewRecipe/></div>
-      <div className="child" style={{marginLeft:'20px'}}><IngredientList/></div>
+      <div className="child">  <label>Name of meal:</label><br />
+        <input id='name'></input><br />
+        <label>Difficulty:</label><br />
+        <select id="difficulty-level">
+        <option hidden selected label=" "></option>
+          <option> Easy</option>
+          <option> Intermediate</option>
+          <option>Difficult</option>
+        </select><br />
+        <label>Prep time:</label><br />
+        <input id='prepTime'></input><br />
+        <label>Total time:</label><br />
+        <input id='totalTime'></input><br />
+        <label>Budget Friendly:</label><br />
+        <select id="budget-friendly">
+        <option hidden selected label=" "></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br />
+        <label>Vegan:</label><br />
+        <select id="vegan">
+        <option hidden selected label=" "></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br />
+        <label>Vegetarian:</label><br />
+        <select id="vegetarian">
+        <option hidden selected label=" "></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br />
+        </div>
+      <div className="child" style={{marginLeft:'20px'}}>
+      <body>
+        <label>Ingredients:</label><br />
+        <input id='ingredient-input' type="text" value={input} onChange={(e) => setInput(e.target.value)}></input>
+        <button className='add-button' onClick={() => AddIngredient(input)}>Add!</button>
+        <ul>
+        {list.map(function (item) {
+	    return <li className="ingredient-item">{item}
+        <button onClick={() => RemoveIngredient(item)}>&times;</button>
+        </li>;
+            })}
+        </ul>
+        </body>
+      </div>
       </div>
       <button className="submit-button" type="button" onClick={onSubmit}>Submit!</button>
-      </body>
-
+</body>
     </>
   );
 
