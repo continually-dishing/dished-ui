@@ -10,12 +10,14 @@ export default function Login() {
             <label className="password"><strong>Password:</strong></label><br />
             <input type="password" placeholder="Enter Password" className="password-input" required /><br />
             <button className='login-button' type="submit">Login</button>
-            <label className="login-remember-me">
+            <label>
                 <input type="checkbox" className='remember-me-input' />
                 Remember Me
             </label><br />
-            <button className="cancle-button">Cancle</button>
-            <label className="forgot-password-link"><a href="facebook.com">Forgot password?</a></label>
+            <div className="login-lower-controls">
+                <button className="cancle-button">Cancle</button>
+                <label className="forgot-password-link"><a href="facebook.com">Forgot password?</a></label>
+            </div>
         </div>
     );
 }
