@@ -10,28 +10,33 @@ h1{
     font-family: 'Brush Script MT';
     padding-top: 40px;
 }
-ul {
+.week-menu-list{
     list-style: none;
 }
-label{
-    background-color: white;
+.weekday-label{
+
+    left: 30%;
     color: black;
     font-family: Courier New, monospace	;
     font-size: 20px;
-}
-li {
-    margin-top: 10px;
     background-color: white;
+    
+}
+.meal-option{
+    margin-top: 10px;
+    margin-left: 10px;
     color: black;
     font-family: Courier New, monospace	;
     font-size: 18px;
-}
-.input {
-    margin-left: 10px;
     width: auto;
 }
+li {
+    margin-top: 20px;
+    display: inline-block;
+}
+
 .generateButton{
-    width: 10%;
+    width: 30%;
     height: 10%;
     background-color: #35CD08;
     border: none;
@@ -42,7 +47,7 @@ li {
     margin-bottom: 30px;
 }
 .ingredientButton{
-    width: 10%;
+    width: 30%;
     height: 10%;
     background-color: #FBBD38;
     border: none;
@@ -50,5 +55,9 @@ li {
     color: white;
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 5px;
     margin-bottom: 30px;
+}
+.ingredient-list {
+    background-color: #EEECEB;
 }
