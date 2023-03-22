@@ -87,57 +87,55 @@ export default function Cookbook() {
   }
 
   return (
-    <>
+    <div className='cookbook-container'>
       <h3>Your Cookbook!</h3>
-      <div className="parent">
-        <div className="child">
-          <br /><label className='meal-label'>Name of meal:</label><br />
-          <input id='name' className='meal-input'></input><br />
-          <br /><label className='meal-label'>Difficulty:</label><br />
-          <select id="difficulty-level" className='meal-input'>
-            <option hidden selected label=" "></option>
-            <option> Easy</option>
-            <option> Intermediate</option>
-            <option>Difficult</option>
-          </select><br />
-          <br /><label className='meal-label'>Prep time:</label><br />
-          <input id='prepTime' className='meal-input'></input><br />
-          <br /><label className='meal-label'>Total time:</label><br />
-          <input id='totalTime' className='meal-input'></input><br />
-          <br /><label className='meal-label'>Budget Friendly:</label><br />
-          <select id="budget-friendly" className='meal-input'>
-            <option hidden selected label=" "></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select><br />
-          <br /><label className='meal-label'>Vegan:</label><br />
-          <select id="vegan" className='meal-input'>
-            <option hidden selected label=" "></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select><br />
-          <br /><label className='meal-label'>Vegetarian:</label><br />
-          <select id="vegetarian" className='meal-input'>
-            <option hidden selected label=" "></option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select><br />
-        </div>
-        <div className="child" style={{ marginLeft: '20px' }}>
-          <label>Ingredients:</label><br />
-          <input id='ingredient-input' type="text" value={input} onChange={(e) => setInput(e.target.value)}></input>
-          <button className='add-button' onClick={() => AddIngredient(input)}>Add!</button>
-          <ul className='ingredient-list'>
-            {list.map((item) => {
-              return <li className="ingredient-item">{item}
-                <button onClick={() => RemoveIngredient(item)}>&times;</button>
-              </li>;
-            })}
-          </ul>
-        </div>
+      <div className="recipe-container">
+        <br /><label className='meal-label'>Name of meal:</label><br />
+        <input id='name' className='meal-input'></input><br />
+        <br /><label className='meal-label'>Difficulty:</label><br />
+        <select id="difficulty-level" className='meal-input'>
+          <option hidden selected label=" "></option>
+          <option> Easy</option>
+          <option> Intermediate</option>
+          <option>Difficult</option>
+        </select><br />
+        <br /><label className='meal-label'>Prep time:</label><br />
+        <input id='prepTime' className='meal-input'></input><br />
+        <br /><label className='meal-label'>Total time:</label><br />
+        <input id='totalTime' className='meal-input'></input><br />
+        <br /><label className='meal-label'>Budget Friendly:</label><br />
+        <select id="budget-friendly" className='meal-input'>
+          <option hidden selected label=" "></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br />
+        <br /><label className='meal-label'>Vegan:</label><br />
+        <select id="vegan" className='meal-input'>
+          <option hidden selected label=" "></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br />
+        <br /><label className='meal-label'>Vegetarian:</label><br />
+        <select id="vegetarian" className='meal-input'>
+          <option hidden selected label=" "></option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select><br />
+      </div>
+      <div className="ingredient-container">
+        <label>Ingredients:</label><br />
+        <input id='ingredient-input' type="text" value={input} onChange={(e) => setInput(e.target.value)}></input>
+        <button className='add-button' onClick={() => AddIngredient(input)}>Add!</button>
+        <ul className='ingredient-list'>
+          {list.map((item) => {
+            return <li className="ingredient-item">{item}
+              <button onClick={() => RemoveIngredient(item)}>&times;</button>
+            </li>;
+          })}
+        </ul>
       </div>
       <button className="submit-button" type="button" onClick={onSubmit}>Submit!</button>
-    </>
+    </div>
   );
 
 }

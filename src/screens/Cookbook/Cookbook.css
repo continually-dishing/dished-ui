@@ -1,19 +1,27 @@
-.parent {
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-  padding: 2rem 2rem;
+.cookbook-container {
+  text-align: center;
 }
 
-.child {
-  display: inline-block;
+.recipe-container {
+  float: left;
+  margin-left: 15%;
   width: 30%;
   min-height: 80%;
   border: 1px solid gray;
   background-color: #EEEE;
-  padding: 1rem 1rem;
   vertical-align: middle;
 }
+
+.ingredient-container {
+  float: right;
+  margin-right: 15%;
+  width: 30%;
+  min-height: 80%;
+  border: 1px solid gray;
+  background-color: #EEEE;
+  vertical-align: middle;
+}
+
 
 .add-button {
   margin-left: 5px;
@@ -32,6 +40,7 @@
 }
 
 .submit-button {
+  margin-top: 60vh;
   width: 100px;
   height: 20px;
   background-color: #58D68D;
@@ -40,6 +49,5 @@
   color: #566573;
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 30px;
 
 }
