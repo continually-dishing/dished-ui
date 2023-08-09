@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import NavigationBar from './components/NavigationBar/NavigationBar';
+import EntryPoint from './screens/Entry/Entry';
+//import NavigationBar from './components/NavigationBar/NavigationBar';
 
 
 function App() {
   return (
     <div>
-    <NavigationBar/>
-
+      <EntryPoint />
     </div>
   );
 }

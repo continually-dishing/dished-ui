@@ -1,0 +1,25 @@
+.search-bar {
+    height: auto;
+    border: none;
+    width: 23vw;
+    outline: none;
+    box-shadow: none;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    box-decoration-break: none;
+}
+
+.fa {
+    float: right;
+    margin-top: 1px;
+    margin-right: 2px;
+}
+
+.search-container {
+    border: solid;
+    border-radius: 5px;
+    width: 25vw;
+    height: auto;
+    margin-top: 10px;
+
+}

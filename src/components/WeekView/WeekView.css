@@ -1,41 +1,41 @@
 .container {
-    text-align: center;    
+    text-align: center;
     height: auto;
     width: 40%;
     background-color: #EEECEB;
     margin: 0% auto;
     margin-top: 10px;
 }
-h1{
+
+h1 {
     font-family: 'Brush Script MT';
     padding-top: 40px;
 }
-.week-menu-list{
+
+.week-menu-list {
     list-style: none;
 }
-.weekday-label{
+
+.weekday-label {
 
     left: 30%;
     color: black;
-    font-family: Courier New, monospace	;
+    font-family: Courier New, monospace;
     font-size: 20px;
     background-color: white;
-    
+
 }
-.meal-option{
+
+.meal-option {
     margin-top: 10px;
     margin-left: 10px;
     color: black;
-    font-family: Courier New, monospace	;
+    font-family: Courier New, monospace;
     font-size: 18px;
     width: auto;
 }
-li {
-    margin-top: 20px;
-    display: inline-block;
-}
 
-.generateButton{
+.generateButton {
     width: 30%;
     height: 10%;
     background-color: #35CD08;
@@ -43,10 +43,11 @@ li {
     cursor: pointer;
     color: white;
     border-radius: 8px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 30px;
 }
-.ingredientButton{
+
+.ingredientButton {
     width: 30%;
     height: 10%;
     background-color: #FBBD38;
@@ -54,10 +55,7 @@ li {
     cursor: pointer;
     color: white;
     border-radius: 8px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-left: 5px;
     margin-bottom: 30px;
-}
-.ingredient-list {
-    background-color: #EEECEB;
 }

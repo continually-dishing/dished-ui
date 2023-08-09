@@ -8,8 +8,11 @@
   width: 30%;
   min-height: 80%;
   border: 1px solid gray;
-  background-color: #EEEE;
   vertical-align: middle;
+  border-radius: 10px;
+  background-image: linear-gradient(white, #D9C6E8);
+
+
 }
 
 .ingredient-container {
@@ -18,35 +21,43 @@
   width: 30%;
   min-height: 80%;
   border: 1px solid gray;
-  background-color: #EEEE;
   vertical-align: middle;
+  border-radius: 10px;
+  background-image: linear-gradient(white, #D9C6E8);
+
 }
 
 
 .add-button {
   margin-left: 5px;
+  background-color: #58D68D;
+  border: none;
+  border-radius: 5px;
 }
 
 .ingredient-item {
   display: block;
+
 }
 
 .meal-label {
-  margin-bottom: 20px;
+  font-weight: bold;
+
 }
 
 .meal-input {
-  margin-top: 5px;
+  margin-bottom: 5px
 }
 
 .submit-button {
+  text-align: center;
+  font-size: 15pt;
   margin-top: 60vh;
-  width: 100px;
-  height: 20px;
-  background-color: #58D68D;
+  width: 300px;
+  height: 100px;
+  background-color: #E1E549;
   border: none;
   cursor: pointer;
-  color: #566573;
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 

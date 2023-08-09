@@ -51,6 +51,7 @@ export default function Cookbook() {
     }
 
     let newMeal: Meal = {
+      id: uuidv4(),
       name: inputs[0].value,
       ingredients: ingredientList,
       difficulty: selectInputs[0].value,
@@ -123,9 +124,9 @@ export default function Cookbook() {
         </select><br />
       </div>
       <div className="ingredient-container">
-        <label>Ingredients:</label><br />
+        <label><strong>Ingredients:</strong></label><br />
         <input id='ingredient-input' type="text" value={input} onChange={(e) => setInput(e.target.value)}></input>
-        <button className='add-button' onClick={() => AddIngredient(input)}>Add!</button>
+        <button className='add-button' onClick={() => AddIngredient(input)}>&#x2713;</button>
         <ul className='ingredient-list'>
           {list.map((item) => {
             return <li className="ingredient-item">{item}
@@ -134,7 +135,7 @@ export default function Cookbook() {
           })}
         </ul>
       </div>
-      <button className="submit-button" type="button" onClick={onSubmit}>Submit!</button>
+      <button className="submit-button" type="button" onClick={onSubmit}>Add to cookbook &#43;</button>
     </div>
   );
 
