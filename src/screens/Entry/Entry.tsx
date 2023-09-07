@@ -2,14 +2,19 @@ import React from "react";
 import './Entry.css'
 import Button from "../../components/Button/Button";
 import EntryImages from "../../components/EntryImages/EntryImages";
+import { useNavigate } from "react-router-dom";
+
+interface EntryPointProps {
+    validLogin?: (x: boolean) => void
+}
 
 
-export default function EntryPoint() {
-
+export default function EntryPoint({ }: EntryPointProps) {
+    const navigate = useNavigate();
 
 
     function onLoginClick() {
-        alert('Login!')
+        navigate('/login')
     }
 
     function OnSignUpClick() {
@@ -37,6 +42,7 @@ export default function EntryPoint() {
                     fontColor="white"
                     handleClick={onLoginClick}
                 />
+
             </div>
         </div>
     );
