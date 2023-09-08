@@ -1,15 +1,15 @@
 .login-container {
     text-align: center;
-    height: 300px;
+    margin: auto;
+    height: 200px;
     width: 300px;
-    align-content: center;
     background-color: #FCFBB9;
     z-index: 1;
-    margin: auto;
+
 }
 
 .login-button {
-    width: 100px;
+    width: 70px;
     height: 20px;
     background-color: #58D68D;
     border: none;
@@ -17,5 +17,24 @@
     color: #566573;
     border-radius: 8px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.forgot-password-link {
+    margin-left: 5px;
+}
+
+.login-lower-controls {
+    margin-top: 20px;
+}
+
+.cancle-button {
+    width: 70px;
+    height: 20px;
+    background-color: #FC4919;
+    border: none;
+    cursor: pointer;
+    color: #566573;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

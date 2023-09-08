@@ -1,11 +1,10 @@
-.general-button{
-    width: auto;
-    height: auto;
+#general-button {
+    height: 30px;
     background-color: #F0F3F4;
     border: none;
     cursor: pointer;
     color: #566573;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
 }

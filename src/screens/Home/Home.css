@@ -1,3 +1,36 @@
-.title{
+.title {
     font-size: 20px;
+}
+
+ReactSearchBox {
+    width: 40vw;
+}
+
+.homepage-image {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    width: 70vw;
+    height: 50vh;
+}
+
+.text-container {
+    width: 100vw;
+    text-align: center;
+    display: table;
+}
+
+.home-heading {
+    color: #A8A7A7;
+}
+
+.account-buttons {
+    background-color: #EDE9A0;
+    width: 7%;
+    height: 5%;
+    border: none;
+    cursor: pointer;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
