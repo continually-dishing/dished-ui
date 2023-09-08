@@ -9,12 +9,13 @@ interface EntryPointProps {
 }
 
 
-export default function EntryPoint({ }: EntryPointProps) {
+export default function EntryPoint({ validLogin }: EntryPointProps) {
     const navigate = useNavigate();
 
 
     function onLoginClick() {
         navigate('/login')
+        console.log(validLogin)
     }
 
     function OnSignUpClick() {
