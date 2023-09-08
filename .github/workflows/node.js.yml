@@ -21,12 +21,7 @@ jobs:
     #
     # You can also run jobs in Docker containers, or you can provide a self-hosted runner that runs on your own infrastructure. For more information, see "[AUTOTITLE](/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on)."
     runs-on: ubuntu-latest
-
-    # This job uses a matrix strategy to run the job four times, once for each specified Node version. For more information, see "[AUTOTITLE](/actions/using-jobs/using-a-matrix-for-your-jobs)."
-    strategy:
-      matrix:
-        node-version: '16.x'
-#
+    
     steps:
       # This step uses the `actions/checkout` action to download a copy of your repository on the runner.
       - uses: actions/checkout@v3
@@ -34,7 +29,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '16.x'
       # This step runs `npm ci` to install any dependencies listed in your `package.json` file.
       - run: npm ci
       # This step runs the `build` script if there is one specified under the `scripts` key in your `package.json` file.
