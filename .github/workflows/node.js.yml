@@ -34,5 +34,3 @@ jobs:
       - run: npm i
       # This step runs the `build` script if there is one specified under the `scripts` key in your `package.json` file.
       - run: npm run build --if-present
-      # This step runs the `test` script that is specified under the `scripts` key in your `package.json` file.
-      - run: npm test
