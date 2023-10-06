@@ -19,7 +19,7 @@ export default function EntryPoint({ validLogin }: EntryPointProps) {
     }
 
     function OnSignUpClick() {
-        alert('SignUp!')
+        navigate('/signup')
     }
     return (
         <div className="entry-container">

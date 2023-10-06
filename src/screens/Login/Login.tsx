@@ -1,7 +1,16 @@
 import React from "react";
 import './Login.css'
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function Login() {
+    const navigate = useNavigate();
+
+    function onLoginClick() {
+        navigate('/home')
+    }
+
 
     return (
         <div className="login-container">
@@ -10,7 +19,7 @@ export default function Login() {
             <label className="password"><strong>Password:</strong></label><br />
             <input type="password" placeholder="Enter Password" className="password-input" required /><br />
             <div className="login-lower-controls">
-                <button className='login-button' type="submit">Login</button>
+                <button className='login-button' type="submit" onClick={onLoginClick}>Login</button>
                 <label className="remember-me-label">
                     <input type="checkbox" className='remember-me-input' />
                     Remember Me
