@@ -1,0 +1,50 @@
+[
+  {
+    "id": "123456789",
+    "name": "spaghetti",
+    "difficulty": "easy",
+    "prepTime": 10,
+    "totalTime": 20,
+    "ingredients": ["pasta", "sauce", "ground beef"],
+    "budgetFriendly": true,
+    "vegan": false,
+    "vegetarian": false,
+    "picturePath": "spaghetti.jpeg"
+  },
+  {
+    "id": "123459",
+    "name": "sweet potato nachos",
+    "difficulty": "medium",
+    "prepTime": 15,
+    "totalTime": 30,
+    "ingredients": ["sweet potato", "cheese", "chicken"],
+    "budgetFriendly": false,
+    "vegan": false,
+    "vegetarian": false,
+    "picturePath": "sweetpotatonachos.webp"
+  },
+  {
+    "id": "189",
+    "name": "Ham omlette",
+    "difficulty": "easy",
+    "prepTime": 10,
+    "totalTime": 20,
+    "ingredients": ["egg", "ham", "cheese", "butter", "tomato", "mushroom"],
+    "budgetFriendly": true,
+    "vegan": false,
+    "vegetarian": false,
+    "picturePath": "hamomlette.jpeg"
+  },
+  {
+    "id": "129",
+    "name": "watermelon salad",
+    "difficulty": "easy",
+    "prepTime": 10,
+    "totalTime": 15,
+    "ingredients": ["watermelon", "feta"],
+    "budgetFriendly": true,
+    "vegan": false,
+    "vegetarian": true,
+    "picturePath": "watermelonsalad.jpeg"
+  }
+]

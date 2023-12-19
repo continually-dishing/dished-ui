@@ -1,19 +1,30 @@
 import React from "react";
-import './SearchBar.css'
+import "./SearchBar.css";
 
-export default function SearchBar() {
-    return (
-        <>
-            <div className="search-container">
-                <input
-                    className="search-bar"
-                    placeholder=' Search recipes, meal suggestions and more...'
-                    type='search'
+interface SearchBarProps {
+  onSearchChange?: () => void;
+  searchBarId?: string;
+  value?: string;
+}
 
-                >
-                </input>
-                <i className="fa">&#xf002;</i>
-            </div>
-        </>
-    );
+export default function SearchBar({
+  onSearchChange,
+  value,
+  searchBarId,
+}: SearchBarProps) {
+  return (
+    <>
+      <div className="search-container">
+        <input
+          id={searchBarId}
+          className="search-bar"
+          placeholder=" Search recipes, meal suggestions and more..."
+          type="search"
+          onChange={onSearchChange}
+          value={value}
+        ></input>
+        <i className="fa">&#xf002;</i>
+      </div>
+    </>
+  );
 }
