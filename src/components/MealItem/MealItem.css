@@ -1,0 +1,18 @@
+.container {
+  width: 25vw;
+  height: auto;
+  border: solid;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.container:hover {
+  background-color: #e9ece6;
+}
+.menu-image {
+  margin-top: 10px;
+  max-width: 15vw;
+  max-height: 15vh;
+}
+.menu-price {
+  margin-bottom: 10px;
+}

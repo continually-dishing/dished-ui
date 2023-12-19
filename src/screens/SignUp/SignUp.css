@@ -1,0 +1,16 @@
+.sign-up-container{
+        margin: 0 auto;
+    text-align: center;
+    background-color: #4C31DF;
+        height: auto;
+    width: 90vw;
+    margin-top: 10vh;
+    padding-bottom: 20px;
+}
+.sign-up-header {
+    color: white;
+    padding-top: 10px;
+}
+.lower-header {
+    color: white
+}
